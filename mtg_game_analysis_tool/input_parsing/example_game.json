@@ -1,0 +1,271 @@
+{
+    "GameID": "game1234",
+    "Players": [
+        {
+            "PlayerID": "Player1",
+            "PlayerName": "John Doe",
+            "LifeTotal": 20,
+            "Deck": "John's Deck",
+            "Hand": [],
+            "Battlefield": [],
+            "Graveyard": [],
+            "ManaPool": {
+                "White": 0,
+                "Blue": 0,
+                "Black": 0,
+                "Red": 0,
+                "Green": 0,
+                "Colorless": 0
+            }
+        },
+        {
+            "PlayerID": "Player2",
+            "PlayerName": "Don Joe",
+            "LifeTotal": 20,
+            "Deck": "Don's Deck",
+            "Hand": [],
+            "Battlefield": [],
+            "Graveyard": [],
+            "ManaPool": {
+                "White": 0,
+                "Blue": 0,
+                "Black": 0,
+                "Red": 0,
+                "Green": 0,
+                "Colorless": 0
+            }
+        }
+    ],
+    "Turns": [
+        {
+            "TurnNumber": 1,
+            "Player": "Player1",
+            "Phase": "Main Phase 1",
+            "Actions": [
+                {
+                    "ActionType": "Play Land",
+                    "CardName": "Forest",
+                    "Target": null,
+                    "ManaSpent": null,
+                    "Result": {
+                        "Player1": {
+                            "Battlefield": ["Forest"],
+                            "Hand": [],
+                            "ManaPool": {
+                                "Green": 1
+                            }
+                        }
+                    }
+                },
+                {
+                    "ActionType": "Cast Spell",
+                    "CardName": "Llanowar Elves",
+                    "Target": null,
+                    "ManaSpent": {
+                        "Green": 1
+                    },
+                    "Result": {
+                        "Player1": {
+                            "Battlefield": ["Forest", "Llanowar Elves"],
+                            "Hand": [],
+                            "ManaPool": {
+                                "Green": 0
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "TurnNumber": 1,
+            "Player": "Player2",
+            "Phase": "Draw Phase",
+            "Actions": [
+                {
+                    "ActionType": "Draw Card",
+                    "CardName": "Mountain",
+                    "Target": null,
+                    "Result": {
+                        "Player2": {
+                            "Hand": ["Mountain"]
+                        }
+                    }
+                }
+            ],
+            "Phase": "Main Phase 1",
+            "Actions": [
+                {
+                    "ActionType": "Play Land",
+                    "CardName": "Mountain",
+                    "Target": null,
+                    "ManaSpent": null,
+                    "Result": {
+                        "Player2": {
+                            "Battlefield": ["Mountain"],
+                            "Hand": [],
+                            "ManaPool": {
+                                "Red": 1
+                            }
+                        }
+                    }
+                },
+                {
+                    "ActionType": "Cast Spell",
+                    "CardName": "Lightning Bolt",
+                    "Target": "Llanowar Elves",
+                    "ManaSpent": {
+                        "Red": 1
+                    },
+                    "Result": {
+                        "Player2": {
+                            "Battlefield": ["Mountain"],
+                            "ManaPool": {
+                                "Red": 0
+                            },
+                            "Graveyard": ["Lightning Bolt"]
+                        },
+                        "Player1": {
+                            "Graveyard": ["Llanowar Elves"],
+                            "Battlefield": ["Forest"]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "TurnNumber": 2,
+            "Player": "Player1",
+            "Phase": "Draw Phase",
+            "Actions": [
+                {
+                    "ActionType": "Draw Card",
+                    "CardName": "Forest",
+                    "Target": null,
+                    "Result": {
+                        "Player1": {
+                            "Hand": ["Forest"]
+                        }
+                    }
+                }
+            ],
+            "Phase": "Main Phase 1",
+            "Actions": [
+                {
+                    "ActionType": "Play Land",
+                    "CardName": "Forest",
+                    "Target": null,
+                    "ManaSpent": null,
+                    "Result": {
+                        "Player1": {
+                            "Battlefield": ["Forest", "Forest"],
+                            "Hand": [],
+                            "ManaPool": {
+                                "Green": 2
+                            }
+                        }
+                    }
+                },
+                {
+                    "ActionType": "Cast Spell",
+                    "CardName": "Tarmogoyf",
+                    "Target": null,
+                    "ManaSpent": {
+                        "Green": 2
+                    },
+                    "Result": {
+                        "Player1": {
+                            "Battlefield": ["Forest", "Forest", "Tarmogoyf"],
+                            "Hand": [],
+                            "ManaPool": {
+                                "Green": 0
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "TurnNumber": 2,
+            "Player": "Player2",
+            "Phase": "Draw Phase",
+            "Actions": [
+                {
+                    "ActionType": "Draw Card",
+                    "CardName": "Mountain",
+                    "Target": null,
+                    "Result": {
+                        "Player2": {
+                            "Hand": ["Mountain"]
+                        }
+                    }
+                }
+            ],
+            "Phase": "Main Phase 1",
+            "Actions": [
+                {
+                    "ActionType": "Play Land",
+                    "CardName": "Mountain",
+                    "Target": null,
+                    "ManaSpent": null,
+                    "Result": {
+                        "Player2": {
+                            "Battlefield": ["Mountain", "Mountain"],
+                            "Hand": [],
+                            "ManaPool": {
+                                "Red": 2
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "TurnNumber": 3,
+            "Player": "Player1",
+            "Phase": "Draw Phase",
+            "Actions": [
+                {
+                    "ActionType": "Draw Card",
+                    "CardName": "Forest",
+                    "Target": null,
+                    "Result": {
+                        "Player1": {
+                            "Hand": ["Forest"]
+                        }
+                    }
+                }
+            ],
+            "Phase": "Combat Phase",
+            "Actions": [
+                {
+                    "ActionType": "Attack",
+                    "Attacker": "Tarmogoyf",
+                    "Defender": "Don Joe",
+                    "Result": {
+                        "Player2": {
+                            "LifeTotal": 18
+                        }
+                    }
+                }
+            ],
+            "Phase": "Main Phase 2",
+            "Actions": [
+                {
+                    "ActionType": "Play Land",
+                    "CardName": "Forest",
+                    "Target": null,
+                    "ManaSpent": null,
+                    "Result": {
+                        "Player1": {
+                            "Battlefield": ["Forest", "Forest", "Forest", "Tarmogoyf"],
+                            "Hand": [],
+                            "ManaPool": {
+                                "Green": 0
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
