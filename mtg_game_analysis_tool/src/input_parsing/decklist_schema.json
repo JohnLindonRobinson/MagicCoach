@@ -1,0 +1,34 @@
+{
+    "type": "object",
+    "properties": {
+        "DeckName": {"type": "string"},
+        "DeckOwner": {"type": "string"},
+        "DeckFormat": {"type": "string"},
+        "MainDeck": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "CardName": {"type": "string"},
+                    "Quantity": {"type": "integer", "minimum": 1},
+                    "ScryfallID": {"type": "string"},  
+                    "ExpansionCode": {"type": "string"} 
+                },
+                "required": ["CardName", "Quantity"]
+            }
+        },
+        "Sideboard": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "CardName": {"type": "string"},
+                    "Quantity": {"type": "integer", "minimum": 1}
+                },
+                "required": ["CardName", "Quantity"]
+            }
+        },
+        "DeckDescription": {"type": "string"}
+    },
+    "required": ["DeckName", "DeckOwner", "DeckFormat", "MainDeck"]
+}

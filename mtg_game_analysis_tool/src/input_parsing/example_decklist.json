@@ -1,0 +1,28 @@
+{
+    "DeckName": "Example Deck",
+    "DeckOwner": "John Doe",
+    "DeckFormat": "Standard",
+    "MainDeck": [
+        {
+            "CardName": "Llanowar Elves",
+            "Quantity": 4,
+            "ScryfallID": "12345",
+            "ExpansionCode": "DOM"
+        },
+        {
+            "CardName": "Tarmogoyf",
+            "Quantity": 2,
+            "ScryfallID": "23456",
+            "ExpansionCode": "MM3"
+        }
+    ],
+    "Sideboard": [
+        {
+            "CardName": "Nature's Claim",
+            "Quantity": 3,
+            "ScryfallID": "34567",
+            "ExpansionCode": "MM3"
+        }
+    ],
+    "DeckDescription": "A ramp-focused green deck."
+}
